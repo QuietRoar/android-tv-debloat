@@ -4,7 +4,7 @@ Brand-specific notes to use **alongside the [main guide](../README.md)**.
 
 | | |
 |---|---|
-| **Tested model** | Mi TV 4A, `MiTV-AXSO0` (board `dangal`), India |
+| **Tested model** | Mi TV 4A, `MiTV-AXSO0` |
 | **Android** | Android TV 9 (API 28), Xiaomi PatchWall firmware |
 | **Hardware** | 1 GB RAM, 4.4 GB usable storage, Amlogic chip |
 | **Likely also applies to** | Other Mi TV 4A / 4X / 4C / 4S models on Android TV 9 with PatchWall. Please [report](../README.md#add-your-device) if yours differs |
@@ -36,7 +36,7 @@ Brand-specific notes to use **alongside the [main guide](../README.md)**.
 | [`lists/common/google-extras.txt`](../lists/common/google-extras.txt) | Google extras (any brand) |
 
 ```bash
-TV=192.168.1.50 ./scripts/tvtune.sh debloat lists/xiaomi/bloat.txt lists/common/google-extras.txt
+TV=YOUR_TV_IP ./scripts/tvtune.sh debloat lists/xiaomi/bloat.txt lists/common/google-extras.txt
 ```
 
 ### Keep these on Mi TV

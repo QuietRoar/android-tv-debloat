@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # tvtune.sh - speed up a slow Android TV over ADB. Every change can be undone.
 #
-# Usage:  TV=192.168.1.50 ./scripts/tvtune.sh <command> [args]
+# Usage:  TV=YOUR_TV_IP ./scripts/tvtune.sh <command> [args]
 #
 # Commands:
 #   check                     Connect and show model, free RAM, storage, home screen
@@ -23,7 +23,7 @@ GOOGLE_LAUNCHERS="com.google.android.tvlauncher com.google.android.tvrecommendat
 
 die() { echo "Error: $*" >&2; exit 1; }
 
-[ -n "${TV:-}" ] || die "set the TV's IP address first, e.g.  TV=192.168.1.50 $0 check"
+[ -n "${TV:-}" ] || die "set the TV's IP address first, e.g.  TV=YOUR_TV_IP $0 check"
 command -v "$ADB" >/dev/null 2>&1 || die "adb not found. Install Android platform-tools (see README) or set ADB=/path/to/adb"
 TARGET="$TV:$PORT"
 

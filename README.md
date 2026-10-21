@@ -42,7 +42,9 @@ Every step has a **copy-paste command** that works on Mac, Windows and Linux. Ma
 
 1. **Settings → Device Preferences → About** (on some TVs: **Settings → System → About**). Select **Build** 7 times until it says "You are now a developer".
 2. Open **Developer options** (now under Device Preferences or System) and turn on **USB debugging** (and **Network debugging** / **ADB over network** if you see it).
-3. Note the TV's IP address: **Settings → Network & Internet → (your Wi-Fi)**. It looks like `192.168.1.50`.
+3. Note the TV's IP address: **Settings → Network & Internet → (your Wi-Fi)**. It's four numbers separated by dots.
+
+> In every command below, replace **`YOUR_TV_IP`** with that address.
 
 ## 2. Install ADB on your computer
 
@@ -68,10 +70,10 @@ sudo apt install adb
 
 ## 3. Connect to the TV
 
-Replace `192.168.1.50` with your TV's IP address:
+Replace `YOUR_TV_IP` with your TV's IP address from step 1:
 
 ```bash
-adb connect 192.168.1.50:5555
+adb connect YOUR_TV_IP:5555
 ```
 
 The TV shows **"Allow USB debugging?"**. Tick **Always allow from this computer** and select **Allow**. Then check:
@@ -85,7 +87,7 @@ You should see your TV's IP followed by `device` (`unauthorized` means you need 
 **Script shortcut (Mac/Linux):** download this repository, open a terminal in its folder, and run:
 
 ```bash
-TV=192.168.1.50 ./scripts/tvtune.sh check
+TV=YOUR_TV_IP ./scripts/tvtune.sh check
 ```
 
 This shows your TV's model, free memory, free storage and current home screen. Run it again at the end to compare.
@@ -115,7 +117,7 @@ This shows your TV's model, free memory, free storage and current home screen. R
 
 4. Press **Home** on the remote. Projectivy should open; finish its welcome steps on the TV.
 
-**Script shortcut:** `TV=192.168.1.50 ./scripts/tvtune.sh launcher`
+**Script shortcut:** `TV=YOUR_TV_IP ./scripts/tvtune.sh launcher`
 
 > "Package … not found" just means that app isn't on your TV. That's fine.
 >
@@ -143,7 +145,7 @@ Repeat this for each line in a list. The app is removed for your user only; Andr
 **Script shortcut** (shows exactly what it will remove and asks before doing anything):
 
 ```bash
-TV=192.168.1.50 ./scripts/tvtune.sh debloat lists/common/google-extras.txt
+TV=YOUR_TV_IP ./scripts/tvtune.sh debloat lists/common/google-extras.txt
 ```
 
 It saves a `removed-<date>.txt` file you can pass to `restore` to undo.
@@ -164,7 +166,7 @@ If you just don't want to *see* an app, hide it in Projectivy instead: highlight
 ### Find bloatware on your own TV
 
 ```bash
-TV=192.168.1.50 ./scripts/tvtune.sh apps
+TV=YOUR_TV_IP ./scripts/tvtune.sh apps
 ```
 
 Or, without the script:
@@ -216,7 +218,7 @@ adb shell cmd package compile -m speed -f com.google.android.youtube.tv
 | App | Before | After full compile (3 runs) |
 |---|---|---|
 | YouTube | 1.2 s | 1.1 / 1.3 / 1.5 s |
-| Hotstar | 2.4 s | 2.7 / 3.4 / 2.3 s |
+| A large streaming app | 2.4 s | 2.7 / 3.4 / 2.3 s |
 
 - There was no measurable launch improvement; the variation between runs was bigger than any gain.
 - It used about **400 MB** of storage for 7 apps.
