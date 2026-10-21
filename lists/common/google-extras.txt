@@ -1,0 +1,17 @@
+# Any Android TV (all brands): discontinued or unneeded Google apps and extra keyboards.
+# One package per line. Lines starting with # are ignored.
+
+# Discontinued services
+com.google.android.music
+com.google.android.videos
+com.google.android.play.games
+
+# Background extras
+com.google.android.tv.bugreportsender
+com.google.android.feedback
+com.google.android.syncadapters.calendar
+
+# Extra keyboards (keep any language you type in)
+com.google.android.inputmethod.japanese
+com.google.android.inputmethod.pinyin
+com.google.android.apps.inputmethod.zhuyin

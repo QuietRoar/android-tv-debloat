@@ -1,0 +1,27 @@
+# Xiaomi Mi TV: tracking, PatchWall and Xiaomi extras, leftover phone apps.
+# Tested on Mi TV 4A (MiTV-AXSO0, Android TV 9). See devices/xiaomi-mi-tv.md.
+# Install a new launcher BEFORE removing this list.
+# One package per line. Lines starting with # are ignored.
+
+# Tracking / analytics
+com.miui.tv.analytics
+com.xiaomi.statistic
+
+# Xiaomi extras
+com.xiaomi.mitv.handbook
+com.xiaomo.tv.milegal
+com.xm.webcontent
+com.xiaomi.mimusic2
+com.mitv.gallery
+com.mitv.dream
+com.xiaomi.mitv.mediaexplorer
+com.mitv.videoplayer
+
+# PatchWall and Mi TV+ (only after another launcher is your home screen)
+com.mitv.tvhome.atv
+com.mitv.tvhome.mitvplus
+
+# Leftover phone apps
+com.android.camera2
+com.android.gallery3d
+com.android.printspooler

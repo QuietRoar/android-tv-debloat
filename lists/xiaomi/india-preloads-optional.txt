@@ -1,0 +1,12 @@
+# Xiaomi Mi TV, OPTIONAL: streaming apps preloaded on Indian Mi TVs.
+# Delete any line for an app you actually use before running this list.
+# One package per line. Lines starting with # are ignored.
+
+co.sensara.tv.mitv
+com.xiaomitv.sonyliv
+com.viacom18.tv.voot
+com.aha.mitv
+com.suntv.sunnxt.mitv
+com.firestick.shemaroome
+com.hungama.movies.xtv
+com.ddnational.prasarbharati
