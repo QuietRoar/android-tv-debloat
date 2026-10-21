@@ -10,6 +10,8 @@ A beginner-friendly guide to making a slow Android TV usable again. You don't ne
 
 Works on any Android TV (Sony, Xiaomi, TCL, Philips, Hisense, OnePlus, set-top boxes…). Brand-specific fixes and tested app lists are in [`devices/`](devices).
 
+> **Use the original:** https://github.com/vyshakv94/android-tv-debloat. Copies elsewhere aren't reviewed and could be altered. See [SECURITY.md](SECURITY.md).
+
 ### Tested devices
 
 | Brand / model | Android | Guide | Result |
@@ -254,7 +256,7 @@ adb shell cmd package compile -m quicken -f com.google.android.youtube.tv
 
 ## Add your device
 
-Tried this on another TV? Please share what worked, even if it's only a note.
+Tried this on another TV? Please share what worked, even if it's only a note. Read [CONTRIBUTING.md](CONTRIBUTING.md) first: every change must be undoable, and an automatic safety check plus a manual review run before anything is merged.
 
 1. Copy [`devices/_template.md`](devices/_template.md) to `devices/<brand>-<model>.md` and fill it in.
 2. If you removed brand-specific apps, add them as `lists/<brand>/bloat.txt` (one package per line, with `#` comments).
@@ -271,6 +273,9 @@ lists/common/                app lists safe on any Android TV
 lists/<brand>/               app lists for one brand
 devices/<brand>-<model>.md   tested notes and brand-specific fixes
 devices/_template.md         template for adding a new device
+tools/safety-check.sh        automatic safety check run on every change
+CONTRIBUTING.md              rules for contributors
+SECURITY.md                  how this project stays safe, and how to report a problem
 ```
 
 ## Disclaimer

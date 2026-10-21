@@ -94,7 +94,8 @@ cmd_debloat() {
   fi
   printf "Continue? [y/N] "; read -r ans
   [ "$ans" = "y" ] || [ "$ans" = "Y" ] || { echo "Cancelled. Nothing changed."; exit 0; }
-  local log="removed-$(date +%Y%m%d-%H%M%S).txt"
+  local log
+  log="removed-$(date +%Y%m%d-%H%M%S).txt"
   for p in $pkgs; do
     is_installed "$p" || continue
     case "$home" in "$p"/*) continue ;; esac

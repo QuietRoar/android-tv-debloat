@@ -1,0 +1,24 @@
+name: Safety check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  safety:
+    runs-on: ubuntu-latest
+    steps:
+      # Pinned to an exact commit so the action itself can't be swapped out (v4.2.2).
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Check lists, file types and commands
+        run: bash tools/safety-check.sh
+
+      - name: Lint shell scripts
+        run: shellcheck scripts/tvtune.sh tools/safety-check.sh
