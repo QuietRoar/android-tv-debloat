@@ -1,0 +1,21 @@
+# OnePlus TV, OPTIONAL: remove only the features you don't use.
+# Delete any line for something you want to keep before running this list.
+# One package per line. Lines starting with # are ignored.
+
+# OnePlus Connect (phone remote app) and its services
+com.heytap.olink
+oneplus.smarthome
+com.oneplus.tv.android.account
+
+# Bluetooth speaker mode (play phone audio through the TV)
+com.heytap.tv.btspeaker
+
+# File browser (for USB drives)
+com.heytap.tv.filebrowser
+
+# OnePlus screensaver - switch to another screensaver FIRST (see devices/oneplus-u1s.md)
+com.oneplus.tv.screensaver
+
+# Google Duo/Meet, YouTube Music
+com.google.android.apps.tachyon
+com.google.android.youtube.tvmusic

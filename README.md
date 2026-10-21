@@ -17,6 +17,7 @@ Works on any Android TV (Sony, Xiaomi, TCL, Philips, Hisense, OnePlus, set-top b
 | Brand / model | Android | Guide | Result |
 |---|---|---|---|
 | Xiaomi Mi TV 4A (`MiTV-AXSO0`) | Android TV 9 | [devices/xiaomi-mi-tv.md](devices/xiaomi-mi-tv.md) | Free RAM ~250 → ~460 MB, storage 84% → 61% used |
+| OnePlus TV 65U1S (`C00`) | Android TV 11 | [devices/oneplus-u1s.md](devices/oneplus-u1s.md) | Launcher ~182 → ~60 MB RAM, storage 4.7 → 5.5 GB free |
 
 Got it working on another TV? [Add your device](#add-your-device).
 
@@ -133,6 +134,7 @@ App lists live in [`lists/`](lists), one app per line. **Open and read a list be
 |---|---|---|
 | [`lists/common/google-extras.txt`](lists/common/google-extras.txt) | Any Android TV | Discontinued Google apps (Play Music, Play Movies, Play Games), feedback/bug-report services, Chinese/Japanese keyboards |
 | [`lists/xiaomi/`](lists/xiaomi) | Xiaomi Mi TV | See [devices/xiaomi-mi-tv.md](devices/xiaomi-mi-tv.md) |
+| [`lists/oneplus/`](lists/oneplus) | OnePlus TV | See [devices/oneplus-u1s.md](devices/oneplus-u1s.md) |
 
 Your brand isn't listed? See [Find bloatware on your own TV](#find-bloatware-on-your-own-tv) below.
 
@@ -189,7 +191,7 @@ Many remotes have a brand button (Mi, Sony's "Netflix"-style shortcuts, TCL's ap
    adb shell am start -a android.intent.action.VIEW -d "market://details?id=flar2.homebutton"
    ```
 
-2. Open it and turn on its **accessibility service** when asked (or **Settings → Device Preferences → Accessibility → Button Mapper → On**).
+2. Open it and turn on its **accessibility service** when asked (or **Settings → Device Preferences → Accessibility → Button Mapper → On**). Some brands, OnePlus for example, hide this switch; see your [device page](devices) for the ADB workaround.
 3. Select **Add buttons** (the **+**) and press the button on your remote. It appears with a technical name such as `BUTTON_2`.
 4. Select it → turn on **Customize** → **Single tap** → **Applications** → pick an app (for example YouTube).
 

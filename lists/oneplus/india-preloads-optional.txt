@@ -1,0 +1,15 @@
+# OnePlus TV, OPTIONAL: streaming apps preloaded on Indian OnePlus TVs.
+# These are normal Play Store apps: you can also uninstall them from Settings -> Apps.
+# Delete any line for an app you actually use before running this list.
+# One package per line. Lines starting with # are ignored.
+
+com.eros.now
+com.hungama.movies.tv
+com.jio.media.stb.ondemand
+com.jio.media.jiotvplus
+com.jiostb.jiogames
+com.jio.web.androidtv
+com.lionsgateplay.videoapp
+com.fancode.tv
+com.suntv.sunnxt
+com.spotify.tv.android

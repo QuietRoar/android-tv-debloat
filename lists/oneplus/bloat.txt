@@ -1,0 +1,23 @@
+# OnePlus TV: OnePlus/HeyTap extras and unneeded Google apps.
+# Tested on OnePlus 65U1S (model C00, Android TV 11). See devices/oneplus-u1s.md.
+# Install a new launcher before removing this list.
+# One package per line. Lines starting with # are ignored.
+
+# OnePlus extras
+com.oneplus.tv.launcher
+com.oneplus.tv.userguide
+net.oneplus.weather
+com.coloros.relax.tv
+com.heytap.tv.support
+
+# HeyTap (OnePlus/Oppo platform) extras
+com.heytap.mcs
+com.heytap.tv.remotediagnosing
+com.heytap.tv.camera
+
+# Google extras (also in lists/common/google-extras.txt)
+com.google.android.videos
+com.google.android.play.games
+com.google.android.feedback
+com.google.android.syncadapters.calendar
+com.android.printspooler

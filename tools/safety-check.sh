@@ -40,8 +40,13 @@ com.xiaomi.android.tvsetup.partnercustomizer
 com.xiaomi.mitv.tvmanager
 com.xiaomi.mitv.res
 com.xiaomi.android.TV.audio
+com.oneplus.tv.remote
+com.heytap.rom.service
+com.heytap.tvapiservice
+com.heytap.tv.livetv
+com.heytap.tv.assistant.oneplus
 "
-protected_prefixes="com.android.providers. com.droidlogic. com.mediatek. com.realtek. com.amlogic. com.android.server."
+protected_prefixes="com.android.providers. com.droidlogic. com.mediatek. com.mstar. com.realtek. com.amlogic. com.android.server."
 
 while IFS= read -r -d '' list; do
   n=0
